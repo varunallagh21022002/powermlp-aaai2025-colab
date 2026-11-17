@@ -7,11 +7,11 @@ Official source: https://github.com/Reed-qiuu/PowerMLP
 
 ## Run in Colab
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/varunallagh21022002/powermlp-aaai2025-colab/blob/main/notebooks/PowerMLP_Colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/varunallagh21022002/powermlp-aaai2025-colab/blob/main/notebooks/PowerMLP_Colab_Executed.ipynb)
 
 Open `notebooks/PowerMLP_Colab.ipynb` in https://colab.research.google.com using File → Upload notebook, then Runtime → Run all. The notebook embeds all required source files. It needs no dataset download or API key. CPU is sufficient. GPU is optional: choose a GPU runtime and set `DEVICE='cuda'`.
 
-The saved notebook outputs are from a local CPU execution, not a claimed Google-hosted execution. Rerunning in Colab generates results for that runtime. Download the results ZIP at the end before disconnecting.
+The original `PowerMLP_Colab.ipynb` preserves the verified local CPU run. **`PowerMLP_Colab_Executed.ipynb` preserves a completed Google Colab CPU run**, with all 11 code cells executed and no error outputs. `results_colab/` contains its 15 model/seed runs, plots, histories and checkpoints. `results/` and the presentation report the separate local run. Rerunning generates results for the current runtime. Download the results ZIP at the end before disconnecting.
 
 ## Local run
 
@@ -68,3 +68,9 @@ This educational implementation was written independently from the paper's mathe
   doi={10.1609/aaai.v39i19.34210}
 }
 ```
+
+## Verified Google Colab run
+
+Completed on 17 November 2026 in a new notebook: https://colab.research.google.com/drive/1HQoHA3_gktrUtnJfuMHvssLJWdYIvisG (Drive access follows the owner’s sharing settings). The public badge opens the executed GitHub copy.
+
+Cloud runtime: Python 3.13.18, PyTorch 2.14.1+cpu, NumPy 2.4.6, Linux CPU, one thread. Five correctness tests passed. Five models × three seeds completed, followed by prediction and archive export. Small platform-dependent numerical differences are visible, especially in the fixed-grid KAN baseline. Both result sets remain available and separately labeled.

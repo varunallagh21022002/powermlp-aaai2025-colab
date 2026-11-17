@@ -1,0 +1,15 @@
+POWERMLP PROJECT
+
+New Google Colab notebook:
+https://colab.research.google.com/drive/1HQoHA3_gktrUtnJfuMHvssLJWdYIvisG
+
+GitHub:
+https://github.com/varunallagh21022002/powermlp-aaai2025-colab
+
+Presentation: output/PowerMLP_Presentation.pptx
+Viva: VIVA_20_Questions_and_Answers.md
+Cloud execution: notebooks/PowerMLP_Colab_Executed.ipynb
+Cloud results: results_colab/
+Local results used in the presentation: results/
+
+Exact PowerMLP architecture with reduced experiments, not a full benchmark reproduction.

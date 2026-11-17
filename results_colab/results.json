@@ -1,0 +1,272 @@
+{
+  "scope": "Reduced protocol, exact PowerMLP architecture; custom fixed-grid KAN, not pykan runtime or full paper reproduction",
+  "config": {
+    "steps": 1000,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "size": "large",
+    "device": "cpu",
+    "domain": [
+      -1,
+      1
+    ],
+    "train": 1024,
+    "validation": 256,
+    "test": 1024,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch": "full",
+    "selection": "lowest validation MSE, checked every 25 steps",
+    "target": "x * exp(-y)"
+  },
+  "environment": {
+    "python": "3.13.18",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "threads": 1,
+    "accelerator": "CPU"
+  },
+  "runs": [
+    {
+      "model": "PowerMLP",
+      "seed": 0,
+      "parameters": 689,
+      "test_rmse": 0.010078351944684982,
+      "test_mae": 0.007343757897615433,
+      "test_r2": 0.9998317012062244,
+      "training_seconds": 1.8991873820000365,
+      "step_ms": 0.6806460500001776,
+      "best_step": 1000
+    },
+    {
+      "model": "MLP",
+      "seed": 0,
+      "parameters": 709,
+      "test_rmse": 0.0163272637873888,
+      "test_mae": 0.010778293013572693,
+      "test_r2": 0.9995582985703227,
+      "training_seconds": 1.3237379419999797,
+      "step_ms": 0.46963150999999925,
+      "best_step": 1000
+    },
+    {
+      "model": "SplineKAN",
+      "seed": 0,
+      "parameters": 735,
+      "test_rmse": 0.7186981439590454,
+      "test_mae": 0.5323216915130615,
+      "test_r2": 0.14415517681884005,
+      "training_seconds": 19.55093191600008,
+      "step_ms": 8.381429130001834,
+      "best_step": 175
+    },
+    {
+      "model": "No basis",
+      "seed": 0,
+      "parameters": 369,
+      "test_rmse": 0.007509379182010889,
+      "test_mae": 0.0058971368707716465,
+      "test_r2": 0.9999065648988359,
+      "training_seconds": 2.0431019339998784,
+      "step_ms": 0.700327480001306,
+      "best_step": 1000
+    },
+    {
+      "model": "ReLU instead of ReLU^3",
+      "seed": 0,
+      "parameters": 689,
+      "test_rmse": 0.013493911363184452,
+      "test_mae": 0.008537854067981243,
+      "test_r2": 0.9996982983136928,
+      "training_seconds": 2.06822248200001,
+      "step_ms": 0.6880619099979413,
+      "best_step": 1000
+    },
+    {
+      "model": "PowerMLP",
+      "seed": 1,
+      "parameters": 689,
+      "test_rmse": 0.006588716991245747,
+      "test_mae": 0.004718703217804432,
+      "test_r2": 0.9999295561827144,
+      "training_seconds": 1.8984732390001682,
+      "step_ms": 0.6919195900013619,
+      "best_step": 1000
+    },
+    {
+      "model": "MLP",
+      "seed": 1,
+      "parameters": 709,
+      "test_rmse": 0.022120241075754166,
+      "test_mae": 0.013182388618588448,
+      "test_r2": 0.9992059992666786,
+      "training_seconds": 1.3308198820000143,
+      "step_ms": 0.43971081999870876,
+      "best_step": 1000
+    },
+    {
+      "model": "SplineKAN",
+      "seed": 1,
+      "parameters": 735,
+      "test_rmse": 0.7612993121147156,
+      "test_mae": 0.580196738243103,
+      "test_r2": 0.05951453350825664,
+      "training_seconds": 19.902089438999838,
+      "step_ms": 7.876501989999269,
+      "best_step": 100
+    },
+    {
+      "model": "No basis",
+      "seed": 1,
+      "parameters": 369,
+      "test_rmse": 0.006969031877815723,
+      "test_mae": 0.005531711038202047,
+      "test_r2": 0.9999211891332377,
+      "training_seconds": 1.4849140030000854,
+      "step_ms": 0.4798070300012114,
+      "best_step": 1000
+    },
+    {
+      "model": "ReLU instead of ReLU^3",
+      "seed": 1,
+      "parameters": 689,
+      "test_rmse": 0.020321808755397797,
+      "test_mae": 0.013453247956931591,
+      "test_r2": 0.9993298594865406,
+      "training_seconds": 1.834135379999907,
+      "step_ms": 0.8876937499985615,
+      "best_step": 1000
+    },
+    {
+      "model": "PowerMLP",
+      "seed": 2,
+      "parameters": 689,
+      "test_rmse": 0.004955568350851536,
+      "test_mae": 0.0036232606507837772,
+      "test_r2": 0.9999582184789738,
+      "training_seconds": 1.8555203920000167,
+      "step_ms": 0.6940111199992316,
+      "best_step": 1000
+    },
+    {
+      "model": "MLP",
+      "seed": 2,
+      "parameters": 709,
+      "test_rmse": 0.023964548483490944,
+      "test_mae": 0.012279665097594261,
+      "test_r2": 0.9990229072803462,
+      "training_seconds": 1.3166720819999682,
+      "step_ms": 0.42253565000009985,
+      "best_step": 1000
+    },
+    {
+      "model": "SplineKAN",
+      "seed": 2,
+      "parameters": 735,
+      "test_rmse": 0.7788626551628113,
+      "test_mae": 0.5892800092697144,
+      "test_r2": -0.03209358204416035,
+      "training_seconds": 19.391587114000004,
+      "step_ms": 7.8636550299984265,
+      "best_step": 200
+    },
+    {
+      "model": "No basis",
+      "seed": 2,
+      "parameters": 369,
+      "test_rmse": 0.004833276383578777,
+      "test_mae": 0.003786681219935417,
+      "test_r2": 0.9999602551800201,
+      "training_seconds": 1.5349109359999602,
+      "step_ms": 0.4717296800004078,
+      "best_step": 1000
+    },
+    {
+      "model": "ReLU instead of ReLU^3",
+      "seed": 2,
+      "parameters": 689,
+      "test_rmse": 0.02074253559112549,
+      "test_mae": 0.012961553409695625,
+      "test_r2": 0.9992679832914473,
+      "training_seconds": 1.8663465349998205,
+      "step_ms": 0.6939083399993251,
+      "best_step": 1000
+    }
+  ],
+  "summary": [
+    {
+      "model": "PowerMLP",
+      "parameters": 689,
+      "test_rmse_mean": 0.007207545762260755,
+      "test_rmse_std": 0.002616856840407828,
+      "test_mae_mean": 0.005228573922067881,
+      "test_mae_std": 0.0019119364639600504,
+      "test_r2_mean": 0.9999064919559709,
+      "test_r2_std": 6.633719916036389e-05,
+      "training_seconds_mean": 1.8843936710000737,
+      "training_seconds_std": 0.025007542466572302,
+      "step_ms_mean": 0.6888589200002571,
+      "step_ms_std": 0.007189022858612328
+    },
+    {
+      "model": "MLP",
+      "parameters": 709,
+      "test_rmse_mean": 0.020804017782211304,
+      "test_rmse_std": 0.0039851426826623924,
+      "test_mae_mean": 0.012080115576585134,
+      "test_mae_std": 0.0012144068214627443,
+      "test_r2_mean": 0.9992624017057824,
+      "test_r2_std": 0.00027211557231873046,
+      "training_seconds_mean": 1.3237433019999874,
+      "training_seconds_std": 0.00707390152303001,
+      "step_ms_mean": 0.4439593266662693,
+      "step_ms_std": 0.023833639335207723
+    },
+    {
+      "model": "SplineKAN",
+      "parameters": 735,
+      "test_rmse_mean": 0.7529533704121908,
+      "test_rmse_std": 0.030938376804116183,
+      "test_mae_mean": 0.5672661463419596,
+      "test_mae_std": 0.03060167716976301,
+      "test_r2_mean": 0.05719204276097878,
+      "test_r2_std": 0.08814732963987286,
+      "training_seconds_mean": 19.614869489666642,
+      "training_seconds_std": 0.26118798967857243,
+      "step_ms_mean": 8.04052871666651,
+      "step_ms_std": 0.2952982897926466
+    },
+    {
+      "model": "No basis",
+      "parameters": 369,
+      "test_rmse_mean": 0.006437229147801797,
+      "test_rmse_std": 0.0014150943977988691,
+      "test_mae_mean": 0.005071843042969704,
+      "test_mae_std": 0.0011278806201526401,
+      "test_r2_mean": 0.9999293364040311,
+      "test_r2_std": 2.7756892647529563e-05,
+      "training_seconds_mean": 1.6876422909999746,
+      "training_seconds_std": 0.3088504357752515,
+      "step_ms_mean": 0.5506213966676418,
+      "step_ms_std": 0.12971215993918375
+    },
+    {
+      "model": "ReLU instead of ReLU^3",
+      "parameters": 689,
+      "test_rmse_mean": 0.018186085236569244,
+      "test_rmse_std": 0.004068983228170338,
+      "test_mae_mean": 0.011650885144869486,
+      "test_mae_std": 0.0027071502998908975,
+      "test_r2_mean": 0.9994320470305601,
+      "test_r2_std": 0.00023264667461005985,
+      "training_seconds_mean": 1.9229014656665793,
+      "training_seconds_std": 0.1268780436787354,
+      "step_ms_mean": 0.7565546666652759,
+      "step_ms_std": 0.11360739222894382
+    }
+  ]
+}
